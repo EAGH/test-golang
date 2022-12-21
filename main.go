@@ -34,7 +34,7 @@ func main() {
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		arr := ArrayObj{}
 		var m ResponseRandom
-		for i := 0; i < 26; i++ {
+		for i := 0; i < 25; i++ {
 			resp, _ := http.Get("https://api.chucknorris.io/jokes/random")
 			defer resp.Body.Close()
 			body, _ := ioutil.ReadAll(resp.Body) // response body is []byte
