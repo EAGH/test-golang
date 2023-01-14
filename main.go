@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"gotest/src/controllers"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -28,6 +29,7 @@ type ResponseRandom struct {
 }
 
 func main() {
+	controllers.Init()
 	fmt.Println("Serving at 8080")
 	r := chi.NewRouter()
 	// unique endpoint routes
