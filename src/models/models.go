@@ -1,12 +1,20 @@
 package models
 
-// Test struct example
-type Test struct {
-	Test    string `json:"test" bson:"test"`
-	TestAux Test2  `json:"text_aux" bson:"text_aux"`
+type ArrayObj struct {
+	Obj []string `json:"obj" bson:"obj"`
+}
+type ResponseRandom struct {
+	//Categories []string `json:"categories" bson:"categories"`
+	//CreatedAt string `json:"created_at" bson:"created_at"`
+	//IcoUrl string `json:"icon_url" bson:"icon_url"`
+	ID string `json:"id" bson:"id"`
+	//UpdatedAt string `json:"updated_at" bson:"updated_at"`
+	//Url string `json:"url" bson:"url"`
+	//Value string `json:"value" bson:"value"`
 }
 
-// Test2 struct example
-type Test2 struct {
-	Test2 string `json:"test2" bson:"test2"`
+type MessageResponseHTTP struct {
+	Status  int         `json:"status" bson:"status"`
+	Message string      `json:"message" bson:"message"`
+	Content interface{} `json:"content" bson:"content"`
 }
